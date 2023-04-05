@@ -1,3 +1,4 @@
+//Объект пользователя, тестовые данные пользователя
 const user = {
   firstName: "Goku",
   lastName: "Son",
@@ -5,7 +6,7 @@ const user = {
   password: "genkidama",
   authorized: false,
 };
-
+//Объект поста с тестовыми данными
 const post = {
     id: 1,
     postName: "Dragon Ball",
@@ -16,14 +17,16 @@ const post = {
     likes: 0,
     isLiked: false
 };
-
+//Объект комментов.
 const comment = {
     authorOfComment: user,
     content: "My opinion",
     commentedPost: post,
     dateOfComment: new Date()
 };
+//Пример того, как можно добавить коммент.
 post.comments.push(comment);
+//Массив постов
 const posts = [
         {
          id: 1,
@@ -46,7 +49,7 @@ const posts = [
          isLiked: false
          }
 ];
-
+//Функция добавления поста в массив постов.
 function addPost(postName,description,author){
     const newPost = {
         postName: postName,
@@ -59,11 +62,11 @@ function addPost(postName,description,author){
     };
     posts.push(newPost);
 };
-
+//Функция авторизации пользователя
 function login(user){
     user.authorized = true;
 };
-
+//Переключатель лайков. 
 function toggleLike(postId) {
   const post = posts.find(p => p.id === postId);
 
