@@ -52,6 +52,7 @@ const posts = [
 //Функция добавления поста в массив постов.
 function addPost(postName,description,author){
     const newPost = {
+        id:posts.length+1,
         postName: postName,
         description: description,
         author: author,
@@ -66,7 +67,7 @@ function addPost(postName,description,author){
 function login(user){
     user.authorized = true;
 };
-//Переключатель лайков. 
+//Переключатель лайков.
 function toggleLike(postId) {
   const post = posts.find(p => p.id === postId);
 
